@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CineFavoritos — uma seleção dos filmes que mais marcaram Allison Fernando.">
+    <meta name="theme-color" content="#1a0000">
+    <title>CineFavoritos - Meus Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">🎬 CineFavoritos</h1>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Meus Filmes Favoritos</h2>
+            <p>Ação, ficção científica e animação — minhas três paixões no cinema.</p>
+            <p id="saudacao"></p>
+        </section>
+
+        <div class="secao-titulo">
+            <h2>Vitrine de Filmes</h2>
+            <span id="contagem-filmes" class="contagem">12 filmes</span>
+        </div>
+
+        <div class="filtros">
+            <button class="filtro ativo" data-filtro="todos">Todos</button>
+            <button class="filtro" data-filtro="Ação">Ação</button>
+            <button class="filtro" data-filtro="Ficção Científica">Ficção Científica</button>
+            <button class="filtro" data-filtro="Animação">Animação</button>
+        </div>
+
+        <section class="vitrine">
+
+            <!-- ───── AÇÃO ───── -->
+            <article class="card" data-genero="Ação">
+                <div class="card-imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Mad_Max_Fury_Road.jpg/250px-Mad_Max_Fury_Road.jpg" alt="Poster do filme Mad Max: Estrada da Fúria" loading="lazy">
+                    <div class="card-overlay">
+                        <p class="card-descricao">Uma perseguição alucinante pelo deserto pós-apocalíptico.</p>
+                        <div class="card-nota"><span class="estrela">★</span> 8.1 IMDb</div>
+                    </div>
+                    <span class="card-badge">Ação</span>
+                </div>
+                <div class="card-info">
+                    <h3>Mad Max: Estrada da Fúria</h3>
+                    <p class="card-meta">2015 • Ação</p>
+                </div>
+            </article>
+
+            <article class="card" data-genero="Ação">
+                <div class="card-imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/98/John_Wick_TeaserPoster.jpg/250px-John_Wick_TeaserPoster.jpg" alt="Poster do filme John Wick" loading="lazy">
+                    <div class="card-overlay">
+                        <p class="card-descricao">Coreografia letal e estilo único — o assassino que voltou.</p>
+                        <div class="card-nota"><span class="estrela">★</span> 7.4 IMDb</div>
+                    </div>
+                    <span class="card-badge">Ação</span>
+                </div>
+                <div class="card-info">
+                    <h3>John Wick</h3>
+                    <p class="card-meta">2014 • Ação</p>
+                </div>
+            </article>
+
+            <article class="card" data-genero="Ação">
+                <div class="card-imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/c/ca/Die_Hard_%281988_film%29_poster.jpg" alt="Poster do filme Duro de Matar" loading="lazy">
+                    <div class="card-overlay">
+                        <p class="card-descricao">Um policial sozinho contra um arranha-céu cheio de terroristas.</p>
+                        <div class="card-nota"><span class="estrela">★</span> 8.2 IMDb</div>
+                    </div>
+                    <span class="card-badge">Ação</span>
+                </div>
+                <div class="card-info">
+                    <h3>Duro de Matar</h3>
+                    <p class="card-meta">1988 • Ação</p>
+                </div>
+            </article>
+
+            <article class="card" data-genero="Ação">
+                <div class="card-imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Gladiator_%282000_film_poster%29.png/250px-Gladiator_%282000_film_poster%29.png" alt="Poster do filme Gladiador" loading="lazy">
+                    <div class="card-overlay">
+                        <p class="card-descricao">Um general traído busca vingança na arena do Coliseu romano.</p>
+                        <div class="card-nota"><span class="estrela">★</span> 8.5 IMDb</div>
+                    </div>
+                    <span class="card-badge">Ação</span>
+                </div>
+                <div class="card-info">
+                    <h3>Gladiador</h3>
+                    <p class="card-meta">2000 • Ação / Épico</p>
+                </div>
+            </article>
+
+            <!-- ───── FICÇÃO CIENTÍFICA ───── -->
+            <article class="card" data-genero="Ficção Científica">
+                <div class="card-imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/db/The_Matrix.png/250px-The_Matrix.png" alt="Poster do filme Matrix" loading="lazy">
+                    <div class="card-overlay">
+                        <p class="card-descricao">E se tudo que você conhece não fosse real? Pílula vermelha ou azul?</p>
+                        <div class="card-nota"><span class="estrela">★</span> 8.7 IMDb</div>
+                    </div>
+                    <span class="card-badge">Ficção Científica</span>
+                </div>
+                <div class="card-info">
+                    <h3>Matrix</h3>
+                    <p class="card-meta">1999 • Ficção Científica</p>
+                </div>
+            </article>
+
+            <article class="card" data-genero="Ficção Científica">
+                <div class="card-imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg" alt="Poster do filme Interestelar" loading="lazy">
+                    <div class="card-overlay">
+                        <p class="card-descricao">Uma jornada épica pelo espaço-tempo em busca da sobrevivência humana.</p>
+                        <div class="card-nota"><span class="estrela">★</span> 8.7 IMDb</div>
+                    </div>
+                    <span class="card-badge">Ficção Científica</span>
+                </div>
+                <div class="card-info">
+                    <h3>Interestelar</h3>
+                    <p class="card-meta">2014 • Ficção Científica</p>
+                </div>
+            </article>
+
+            <article class="card" data-genero="Ficção Científica">
+                <div class="card-imagem">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg" alt="Poster do filme A Origem" loading="lazy">
+                    <div class="card-overlay">
+                        <p class="card-descricao">Um labirinto mental que redefine os limites da realidade.</p>
+                        <div class="card-nota"><span class="estrela">★</span> 8.8 IMDb</div>
+                    </div>
+                    <span class="card-badge">Ficção Científica</span>
+                </div>
+                <div class="card-info">
+                    <h3>A Origem</h3>
+                    <p class="card-meta">2010 • Ficção Científica</p>
+                </div>
+            </article>
+
+            <article class="card" data-genero="Ficção Científica">
+                <div class="card-imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Blade_Runner_2049_poster.png" alt="Poster do filme Blade Runner 2049" loading="lazy">
+                    <div class="card-overlay">
+                        <p class="card-descricao">Uma sequência visualmente deslumbrante sobre o que nos torna humanos.</p>
+                        <div class="card-nota"><span class="estrela">★</span> 8.0 IMDb</div>
+                    </div>
+                    <span class="card-badge">Ficção Científica</span>
+                </div>
+                <div class="card-info">
+                    <h3>Blade Runner 2049</h3>
+                    <p class="card-meta">2017 • Ficção Científica</p>
+                </div>
+            </article>
+
+            <!-- ───── ANIMAÇÃO ───── -->
+            <article class="card" data-genero="Animação">
+                <div class="card-imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/f/fa/Spider-Man_Into_the_Spider-Verse_poster.png" alt="Poster do filme Homem-Aranha no Aranhaverso" loading="lazy">
+                    <div class="card-overlay">
+                        <p class="card-descricao">Uma revolução visual nas animações com vários Aranhas no multiverso.</p>
+                        <div class="card-nota"><span class="estrela">★</span> 8.4 IMDb</div>
+                    </div>
+                    <span class="card-badge">Animação</span>
+                </div>
+                <div class="card-info">
+                    <h3>Homem-Aranha no Aranhaverso</h3>
+                    <p class="card-meta">2018 • Animação</p>
+                </div>
+            </article>
+
+            <article class="card" data-genero="Animação">
+                <div class="card-imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg" alt="Poster do filme Toy Story" loading="lazy">
+                    <div class="card-overlay">
+                        <p class="card-descricao">A primeira animação 3D da Pixar — onde brinquedos ganham vida.</p>
+                        <div class="card-nota"><span class="estrela">★</span> 8.3 IMDb</div>
+                    </div>
+                    <span class="card-badge">Animação</span>
+                </div>
+                <div class="card-info">
+                    <h3>Toy Story</h3>
+                    <p class="card-meta">1995 • Animação</p>
+                </div>
+            </article>
+
+            <article class="card" data-genero="Animação">
+                <div class="card-imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Up_%282009_film%29.jpg" alt="Poster do filme Up - Altas Aventuras" loading="lazy">
+                    <div class="card-overlay">
+                        <p class="card-descricao">Uma aventura emocionante a bordo de uma casa voadora com balões.</p>
+                        <div class="card-nota"><span class="estrela">★</span> 8.3 IMDb</div>
+                    </div>
+                    <span class="card-badge">Animação</span>
+                </div>
+                <div class="card-info">
+                    <h3>Up - Altas Aventuras</h3>
+                    <p class="card-meta">2009 • Animação</p>
+                </div>
+            </article>
+
+            <article class="card" data-genero="Animação">
+                <div class="card-imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/3/3d/The_Lion_King_poster.jpg" alt="Poster do filme O Rei Leão" loading="lazy">
+                    <div class="card-overlay">
+                        <p class="card-descricao">A jornada de Simba — um clássico atemporal sobre coragem e destino.</p>
+                        <div class="card-nota"><span class="estrela">★</span> 8.5 IMDb</div>
+                    </div>
+                    <span class="card-badge">Animação</span>
+                </div>
+                <div class="card-info">
+                    <h3>O Rei Leão</h3>
+                    <p class="card-meta">1994 • Animação</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CineFavoritos — Feito por Allison Fernando</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

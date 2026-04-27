@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com CineFavoritos — indique um filme ou bata um papo sobre cinema.">
+    <meta name="theme-color" content="#1a0000">
+    <title>Contato - CineFavoritos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">🎬 CineFavoritos</h1>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contato">
+            <h2>Entre em Contato</h2>
+            <p class="subtitulo">Quer indicar um filme ou bater um papo sobre cinema? Manda uma mensagem!</p>
+
+            <form id="formContato" novalidate>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                <span class="erro" id="erro-nome"></span>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                <span class="erro" id="erro-email"></span>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required maxlength="500"></textarea>
+                <div class="campo-footer">
+                    <span class="erro" id="erro-mensagem"></span>
+                    <span id="contador" class="contador">0/500 caracteres</span>
+                </div>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+
+            <p id="resposta"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CineFavoritos — Feito por Allison Fernando</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
