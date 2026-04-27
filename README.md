@@ -2,6 +2,8 @@
 
 Um site pessoal mostrando uma seleção de filmes favoritos — feito com **HTML, CSS e JavaScript puros**, sem frameworks.
 
+🌐 **Acesse o site online:** [jaog1v1.github.io/cinefavoritos](https://jaog1v1.github.io/cinefavoritos/)
+
 ## ✨ Funcionalidades
 
 - **Vitrine de 12 filmes** com pôsteres, descrições e nota IMDb
