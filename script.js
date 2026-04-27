@@ -95,7 +95,10 @@ function configurarFormulario() {
         document.getElementById(campo)?.addEventListener('input', () => limparErro(campo));
     });
 
-    form.addEventListener('submit', function(evento) {
+    // Endpoint do FormSubmit (envia a mensagem pro Gmail do dono do site)
+    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/joaogabrielsabedra@gmail.com';
+
+    form.addEventListener('submit', async function(evento) {
         evento.preventDefault();
 
         const nome = document.getElementById('nome').value.trim();
@@ -126,15 +129,33 @@ function configurarFormulario() {
 
         botao.textContent = 'Enviando...';
         botao.disabled = true;
+        resposta.style.color = '';
         resposta.textContent = '';
 
-        setTimeout(() => {
-            resposta.textContent = `✅ Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.`;
-            form.reset();
-            if (contador) contador.textContent = '0/500 caracteres';
+        try {
+            const dados = new FormData(form);
+
+            const res = await fetch(FORM_ENDPOINT, {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: dados
+            });
+
+            if (res.ok) {
+                resposta.style.color = '#c9a227';
+                resposta.textContent = `✅ Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.`;
+                form.reset();
+                if (contador) contador.textContent = '0/500 caracteres';
+            } else {
+                throw new Error('Falha no envio');
+            }
+        } catch (erro) {
+            resposta.style.color = '#e63946';
+            resposta.textContent = '❌ Não foi possível enviar agora. Tente novamente em alguns instantes.';
+        } finally {
             botao.textContent = 'Enviar Mensagem';
             botao.disabled = false;
-        }, 1000);
+        }
     });
 }
 

@@ -25,6 +25,11 @@
             <p class="subtitulo">Quer indicar um filme ou bater um papo sobre cinema? Manda uma mensagem!</p>
 
             <form id="formContato" novalidate>
+                <!-- Configurações do FormSubmit -->
+                <input type="hidden" name="_subject" value="Nova mensagem do CineFavoritos 🎬">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
                 <span class="erro" id="erro-nome"></span>
