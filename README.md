@@ -29,4 +29,4 @@ Basta abrir o `index.html` no navegador — não há dependências nem build.
 
 ## 👤 Autor
 
-Feito por **Allison Fernando** • 2026
+Feito por **João Gabriel 1°ADM** • 2026
